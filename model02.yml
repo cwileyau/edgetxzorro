@@ -1,6 +1,6 @@
 semver: 2.12.4
 header: 
-   name: "v8_d"
+   name: "v8 02"
    modelId: 
       0:
          val: 2
@@ -16,10 +16,10 @@ extendedLimits: 0
 extendedTrims: 0
 throttleReversed: 0
 enableCustomThrottleWarning: 1
-disableTelemetryWarning: 0
+disableTelemetryWarning: 1
 showInstanceIds: 0
 checklistInteractive: 0
-customThrottleWarningPosition: 85
+customThrottleWarningPosition: 100
 beepANACenter: 0
 mixData: 
  -
@@ -41,48 +41,48 @@ mixData:
    name: ""
  -
    destCh: 0
-   srcRaw: "SD"
+   srcRaw: "I6"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: 7
+   weight: 5
    offset: 0
    swtch: "NONE"
    delayUp: 0
    delayDown: 0
    speedUp: 3
    speedDown: 3
-   name: "rus"
+   name: "RuR"
  -
    destCh: 0
-   srcRaw: "SA"
+   srcRaw: "I5"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: -7
+   weight: -5
    offset: 0
    swtch: "NONE"
    delayUp: 0
    delayDown: 0
    speedUp: 3
    speedDown: 3
-   name: "rup"
+   name: "RuL"
  -
-   destCh: 1
-   srcRaw: "I1"
-   carryTrim: 0
+   destCh: 2
+   srcRaw: "I2"
+   carryTrim: 1
    mixWarn: 0
    mltpx: ADD
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: 100
+   weight: "gv(0)"
    offset: 0
    swtch: "NONE"
    delayUp: 0
@@ -99,77 +99,43 @@ mixData:
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: 100
+   weight: -15
    offset: 0
-   swtch: "NONE"
+   swtch: "SE0"
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "lo"
  -
    destCh: 2
-   srcRaw: "I3"
+   srcRaw: "I2"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: 13
+   weight: 65
    offset: 0
-   swtch: "NONE"
+   swtch: "SE2"
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: "pin"
+   name: "hi"
  -
    destCh: 2
-   srcRaw: "P1"
-   carryTrim: 0
+   srcRaw: "I2"
+   carryTrim: 1
    mixWarn: 0
    mltpx: ADD
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: -10
-   offset: 10
-   swtch: "NONE"
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "vmg"
- -
-   destCh: 2
-   srcRaw: "SB"
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: ADD
-   delayPrec: 0
-   speedPrec: 0
-   flightModes: 000000000
-   weight: -6
+   weight: -140
    offset: 0
-   swtch: "NONE"
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "hnl"
- -
-   destCh: 2
-   srcRaw: "SG"
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: ADD
-   delayPrec: 0
-   speedPrec: 0
-   flightModes: 000000000
-   weight: -80
-   offset: -80
-   swtch: "NONE"
+   swtch: "SA2"
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -201,16 +167,16 @@ limitData:
       symetrical: 0
       revert: 1
       curve: 0
-      name: ""
+      name: "RUD"
    2:
-      min: 580
-      max: -540
+      min: 610
+      max: -600
       ppmCenter: 0
       offset: 0
       symetrical: 0
       revert: 0
       curve: 0
-      name: ""
+      name: "SHT"
 expoData: 
  -
    mode: 3
@@ -239,42 +205,28 @@ expoData:
       value: 70
    chn: 0
    flightModes: 000000000
-   name: "strt"
+   name: ""
  -
    mode: 3
    scale: 0
-   trimSource: 0
-   srcRaw: "Ele"
+   trimSource: 1
+   srcRaw: "Thr"
    weight: 100
    offset: 0
    swtch: "NONE"
    curve: 
       type: 1
-      value: 0
-   chn: 1
-   flightModes: 000000000
-   name: ""
- -
-   mode: 3
-   scale: 0
-   trimSource: 0
-   srcRaw: "Thr"
-   weight: 85
-   offset: 0
-   swtch: "NONE"
-   curve: 
-      type: 1
-      value: -80
+      value: -90
    chn: 2
    flightModes: 000000000
    name: ""
  -
    mode: 3
    scale: 0
-   trimSource: 0
+   trimSource: 1
    srcRaw: "Rud"
-   weight: 100
-   offset: 0
+   weight: -20
+   offset: 95
    swtch: "NONE"
    curve: 
       type: 1
@@ -282,19 +234,114 @@ expoData:
    chn: 3
    flightModes: 000000000
    name: ""
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "SG"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 5
+   flightModes: 000000000
+   name: "RuL"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "SH"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 6
+   flightModes: 000000000
+   name: "RuR"
+curves: 
+   0:
+      type: 0
+      smooth: 0
+      points: 0
+      name: "sht"
+points: 
+   0:
+      val: -18
+   1:
+      val: -7
+   2:
+      val: 8
+   3:
+      val: 25
+   4:
+      val: 62
+logicalSw: 
+   0:
+      func: FUNC_VNEG
+      def: "tele(10),62"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 5
+      duration: 30
+customFn: 
+   0:
+      swtch: "ON"
+      func: ADJUST_GVAR
+      def: "0,Src,I3,1"
+   1:
+      swtch: "L1"
+      func: PLAY_VALUE
+      def: "tele(10),1,30"
+   2:
+      swtch: "SE2"
+      func: PLAY_TRACK
+      def: "high,1,1x"
+   3:
+      swtch: "SE0"
+      func: PLAY_TRACK
+      def: "low,1,1x"
+   4:
+      swtch: "SF2"
+      func: PLAY_TRACK
+      def: "sport,1,1x"
+   5:
+      swtch: "SF0"
+      func: PLAY_TRACK
+      def: "normal,1,1x"
+   6:
+      swtch: "SE1"
+      func: PLAY_TRACK
+      def: "normal,0,1x"
+   7:
+      swtch: "SE0"
+      func: RGB_LED
+      def: "blue,0,On"
+   8:
+      swtch: "SE1"
+      func: RGB_LED
+      def: "green,0,On"
+   9:
+      swtch: "SE2"
+      func: RGB_LED
+      def: "red,0,On"
 flightModeData: 
    0:
       trim: 
-         3:
-            value: 48
-            mode: 0
+         0:
+            value: 0
+            mode: 31
+         1:
+            value: 0
+            mode: 31
+         2:
+            value: 0
+            mode: 31
       name: ""
       swtch: "NONE"
       fadeIn: 0
       fadeOut: 0
       gvars: 
          0:
-            val: 0
+            val: 95
          1:
             val: 0
          2:
@@ -313,10 +360,8 @@ flightModeData:
             val: 0
 thrTraceSrc: Thr
 switchWarning: 
-   SB:
+   SE:
       pos: mid
-   SF:
-      pos: up
 rssiSource: none
 rfAlarms: 
    warning: 45
@@ -338,15 +383,24 @@ moduleData:
             crsfArmingMode: 0
             crsfArmingTrigger: "NONE"
             spare3: 0
+trainerData: 
+   mode: OFF
+   channelsStart: 0
+   channelsCount: -8
+   frameLength: 0
+   delay: 0
+   pulsePol: 0
 inputNames: 
    0:
-      val: "Ail"
-   1:
-      val: "Ele"
+      val: "RUD"
    2:
-      val: "Thr"
+      val: "SHT"
    3:
-      val: "Rud"
+      val: "TWK"
+   5:
+      val: "RUL"
+   6:
+      val: "RUR"
 potsWarnEnabled: 0
 telemetrySensors: 
    0:
@@ -357,7 +411,7 @@ telemetrySensors:
       label: "1RSS"
       subId: 0
       type: TYPE_CUSTOM
-      unit: 29
+      unit: 17
       prec: 0
       autoOffset: 0
       filter: 0
@@ -376,7 +430,7 @@ telemetrySensors:
       label: "2RSS"
       subId: 0
       type: TYPE_CUSTOM
-      unit: 29
+      unit: 17
       prec: 0
       autoOffset: 0
       filter: 0
@@ -490,7 +544,7 @@ telemetrySensors:
       label: "TRSS"
       subId: 0
       type: TYPE_CUSTOM
-      unit: 29
+      unit: 17
       prec: 0
       autoOffset: 0
       filter: 0
@@ -557,7 +611,7 @@ telemetrySensors:
       cfg: 
          custom: 
             ratio: 0
-            offset: 0
+            offset: 1
    11:
       id1: 
          id: 8
@@ -601,7 +655,7 @@ telemetrySensors:
          id: 8
       id2: 
          instance: 3
-      label: "Bat%"
+      label: "Bat"
       subId: 0
       type: TYPE_CUSTOM
       unit: 13
@@ -617,14 +671,88 @@ telemetrySensors:
             offset: 0
    14:
       id1: 
-         id: 33022
+         id: 2
       id2: 
          instance: 0
-      label: "Volt"
+      label: "GPS"
       subId: 0
       type: TYPE_CUSTOM
-      unit: 1
+      unit: 40
+      prec: 0
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         param: 0
+   15:
+      id1: 
+         id: 2
+      id2: 
+         instance: 2
+      label: "GSpd"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 7
+      prec: 1
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   16:
+      id1: 
+         id: 2
+      id2: 
+         instance: 3
+      label: "Hdg"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 20
       prec: 2
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   17:
+      id1: 
+         id: 2
+      id2: 
+         instance: 4
+      label: "Alt"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 9
+      prec: 0
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   18:
+      id1: 
+         id: 2
+      id2: 
+         instance: 5
+      label: "Sats"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 0
+      prec: 0
       autoOffset: 0
       filter: 0
       logs: 1
@@ -642,24 +770,188 @@ screens:
             0:
                sources: 
                   0:
-                     val: I0
+                     val: ch(0)
                   1:
-                     val: I2
-            2:
+                     val: ch(2)
+            1:
                sources: 
                   0:
                      val: tele(10)
                   1:
                      val: tele(6)
+            2:
+               sources: 
+                  0:
+                     val: tele(2)
+            3:
+               sources: 
+                  0:
+                     val: TX_VOLTAGE
+                  1:
+                     val: TX_TIME
+   1:
+      type: VALUES
+      u: 
+         lines: 
+            0:
+               sources: 
+                  0:
+                     val: tele(14)
+                  1:
+                     val: tele(15)
+            1:
+               sources: 
+                  0:
+                     val: tele(16)
+                  1:
+                     val: tele(+15)
 view: 0
-modelRegistrationID: "739025Q-"
+modelRegistrationID: " 692XAP-"
+customSwitches: 
+   SW1:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_ON
+      state: 1
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW2:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW3:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW4:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW5:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW6:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SD:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SA:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+cfsGroupOn: 
+   1:
+      v: 1
+   2:
+      v: 0
+   3:
+      v: 0
+   4:
+      v: 0
 usbJoystickExtMode: 0
 usbJoystickIfMode: JOYSTICK
 usbJoystickCircularCut: 0
 radioGFDisabled: GLOBAL
-radioTrainerDisabled: GLOBAL
-modelHeliDisabled: GLOBAL
-modelFMDisabled: GLOBAL
+radioTrainerDisabled: OFF
+modelHeliDisabled: OFF
+modelFMDisabled: ON
 modelCurvesDisabled: GLOBAL
 modelGVDisabled: GLOBAL
 modelLSDisabled: GLOBAL
